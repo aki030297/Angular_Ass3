@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div>
+     <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+      <p *ngIf="showMovieList">First Movie = INDIAN</p>
+      <div class="movieList"
+        *ngFor="let movieList of movie"
+        [ngStyle]="{backgroundColor: movieList >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{'text': movieList >= 5}"
+      >{{ movieList }}</div>
+    </div>
+  </div>
+</div>
